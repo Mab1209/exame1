@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/ScrollTrigger.min.js">
+    </script>
+    <style>
+  
+        .background1{
+        background:#9cebd5;
+        color: white;
+        height:72.5vw;
+        margin-left:-8px;
+        margin-right:-8px;
+        margin-top:-10px;
+        margin-bottom:-13px;
+        padding-top: ;
+        padding-left: 5%;
+        }
+        .items{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width:100%;
+        font-size:100px;
+        margin:;
+        
+        }
+        .item{
+        display:flex;
+        flex-wrap: wrap;
+        width:30vw;
+        height:17vw;
+        align-items: center;
+        margin:1px;
+        
+        }
+        .1{
+        font-size:100px;
+        }
+        .2{
+        font-size:100px;
+        }
+        .3{
+        font-size:100px;
+        }
+        .4{
+        font-size:100px;
+        }
+        .5{
+        font-size:100px;
+        }
+        .6{
+        font-size:100px;
+        }
+        .7{
+        font-size:100px;
+        }
+        .8{
+        font-size:100px;
+        }
+        .9{
+        font-size:100px;
+        }
+
+        .background2{
+        background:#E0AB94;
+        height:71vw;
+        margin-left:-8px;
+        margin-right:-8px;
+        margin-top:-50px;
+        margin-bottom:-10px;
+        opacity:100%;
+        }
+
+        .form{
+        opacity:0%;
+        }
+        .crayon{
+        width:10vw;
+        bottom:25px;
+        margin-left:0px;
+        position: fixed;
+        }
+    </style>
+</head>
+<body>
+    <div class="background1">
+    <div class="text">
+    Liste d'épicerie
+    </div>
+        <div class="items">
+        <div class="item">
+            <div class="food1">
+            🍎
+        </div>
+        </div>
+        <div class="item ">
+            <div class="food2">
+            🍕
+        </div> 
+        </div>
+        <div class="item ">
+        <div class="food3">
+            🥬
+        </div> 
+        </div>
+        <div class="item ">
+            <div class="food4">
+            🍓
+        </div> 
+        </div>
+        <div class="item ">
+            <div class="food5">
+            🍔
+        </div> 
+        </div>
+        <div class="item ">
+            <div class="food6">
+            🍉
+        </div> 
+        </div>
+        <div class="item ">
+            <div class="food7">
+            🍗
+        </div> 
+        </div>
+        <div class="item ">
+            <div class="food8">
+            🍇
+        </div> 
+        </div>
+        <div class="item ">
+            <div class="food9">
+            🍏
+        </div> 
+        </div>
+    </div>
+    <img src="https://i.imgur.com/dqMC13z.png" class="crayon"/>
+
+
+    </div>
+    <div class="background2">
+    <form action="/action_page.php" class="form">
+    <input type="text" id="fname" name="fname"class="text"><br>
+    <input type="ajouté" value="ajouté"class="submit">
+    </form>
+    </div>
+        
+      <script>
+                    gsap.timeline({
+            duration: 0.5,
+            delay: 0.25,
+            repeat: -1,
+            yoyo: true,
+            repeatDelay: 0.25,
+            })
+            .to('.food1 ', 
+            { fontSize: '125px' })
+            .to('.food2 ', 
+            { fontSize: '125px' })
+            .to('.food3 ', 
+            { fontSize: '125px' })
+            .to('.food4 ', 
+            { fontSize: '125px' })
+            .to('.food5 ', 
+            { fontSize: '125px' })
+            .to('.food6 ', 
+            { fontSize: '125px' })
+            .to('.food7 ', 
+            { fontSize: '125px' })
+            .to('.food8 ', 
+            { fontSize: '125px' })
+            .to('.food9 ',
+            { fontSize: '125px' })
+
+
+
+            gsap.to('.form', {
+            scrollTrigger: {
+                scrub: 1,
+                
+                start: 'bottom 75%',
+                end: 'top 25%',
+                trigger: '.form',
+                duration: 1,
+            },
+            opacity: '100%',
+            })
+
+            gsap.to('.crayon', {
+            scrollTrigger: {
+                
+                scrub: 1,
+                
+                start: 'top 0%',
+                end: 'bottom 80%',
+                trigger: '.wrapper',
+
+            },
+            
+            marginLeft:'90%',
+            marginTop:'80%',  
+            }) 
+      </script>      
+</body>
+</html>
